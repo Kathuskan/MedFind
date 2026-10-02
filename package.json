@@ -1,0 +1,22 @@
+{
+  "name": "medfind",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace @medfind/web",
+    "build": "npm run build --workspace @medfind/web",
+    "test": "npm run test --workspace @medfind/web",
+    "typecheck": "npm run typecheck --workspace @medfind/web",
+    "format": "prettier --write apps/web package.json compose.yaml .github/workflows",
+    "format:check": "prettier --check apps/web package.json compose.yaml .github/workflows"
+  },
+  "devDependencies": {
+    "prettier": "3.9.9"
+  }
+}
