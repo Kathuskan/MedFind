@@ -1,2 +1,16 @@
 .DS_Store
 ~$*.docx
+node_modules/
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+*.db
+.env
+.env.*
+!.env.example
+coverage/
+playwright-report/
+test-results/
