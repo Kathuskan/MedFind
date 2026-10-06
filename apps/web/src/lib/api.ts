@@ -37,6 +37,10 @@ export async function api<T>(path: string, body?: unknown, signal?: AbortSignal)
   if (!response.ok) throw new Error('We could not check availability. Please try again.');
   return response.json() as Promise<T>;
 }
+/**
+ * Formats a Product object into a human-readable string.
+ * Includes name, strength, form, and optionally the brand.
+ */
 export const productLabel = (p: Product) =>
   `${p.name} ${p.strength} · ${p.form}${p.brand ? ` · ${p.brand}` : ''}`;
 export const localTime = (value: string) =>
