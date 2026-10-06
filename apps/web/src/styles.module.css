@@ -1,7 +1,9 @@
 .utility {
-  background: #143d2b;
+  background: linear-gradient(90deg, #103624 0%, #174831 100%);
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 .utility > div {
   max-width: 1200px;
