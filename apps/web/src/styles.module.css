@@ -530,18 +530,19 @@
 .footer {
   max-width: 1152px;
   margin: auto;
-  padding: 30px 0;
-  border-top: 1px solid var(--border);
+  padding: 40px 0;
+  border-top: 1.5px solid var(--border);
   display: flex;
   align-items: center;
   gap: 20px;
-  font-size: 12px;
-  color: var(--muted);
+  font-size: 13px;
+  color: #6b7b71;
 }
 .footerBrand {
   color: var(--primary);
   font-size: 21px;
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
 .footer p {
   margin: 0;
@@ -556,6 +557,10 @@
   min-height: 44px;
   display: flex;
   align-items: center;
+  transition: color 0.2s ease;
+}
+.footer a:hover {
+  color: var(--primary);
 }
 .skip {
   position: absolute;
