@@ -297,11 +297,18 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid #bacac0;
-  border-radius: 9px;
+  border: 1.5px solid #dce5df;
+  border-radius: 12px;
   padding: 0 12px;
   min-height: 50px;
   color: #54725f;
+  background: #fdfdfd;
+  transition: all 0.2s ease;
+}
+.inputWrap:focus-within {
+  border-color: #72a984;
+  box-shadow: 0 0 0 3px rgba(114, 169, 132, 0.15);
+  background: #ffffff;
 }
 .inputWrap input,
 .inputWrap select {
