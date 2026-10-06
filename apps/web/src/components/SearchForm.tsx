@@ -121,6 +121,7 @@ export function SearchForm() {
                     type="radio"
                     name="product"
                     checked={selected?.id === product.id}
+                    aria-label={`Select ${productLabel(product)}`}
                     onChange={() => {
                       setSelected(product);
                       setSearch(null);
