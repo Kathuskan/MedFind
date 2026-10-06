@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 :root {
   font-family:
-    Inter,
+    'Outfit',
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -8,12 +10,12 @@
     'Segoe UI',
     sans-serif;
   color: #172b24;
-  background: #fff;
+  background: #fdfdfd; /* slightly cleaner background */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  --primary: #14532d;
+  --primary: #124d29;
   --muted: #52635b;
   --border: #dce5df;
 }
