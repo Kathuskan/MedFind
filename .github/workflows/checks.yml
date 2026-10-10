@@ -5,6 +5,11 @@ on:
 permissions:
   contents: read
 jobs:
+  hosted-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -f infra/hosted.Dockerfile -t medfind-demo .
   web:
     runs-on: ubuntu-latest
     steps:

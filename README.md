@@ -17,6 +17,12 @@ The documents translate Team Enigma's supplied Gate 1 proposal into a build spec
 
 ## Foundation release
 
+### Deploy the demo
+
+[Deploy to Render](https://render.com/deploy?repo=https://github.com/Kathuskan/MedFind)
+
+The included `render.yaml` creates one web/API container and a private PostgreSQL database in Singapore. Both use free plans for a short-lived demonstration. Sign in to Render, review the Blueprint, and deploy. See [deployment instructions](docs/DEPLOYMENT.md) for limits, checks, and updating the app. Deployment is not confirmed until Render reports success and the public search flow has been checked.
+
 The first working slice includes a responsive React interface, exact medicine selection, town filtering, pharmacy details, a FastAPI public API, SQLAlchemy models, Alembic migrations, synthetic seed data, and automated checks. PostgreSQL is the target database; SQLite is supported for quick local development only.
 
 All pharmacy and stock records are fictional. No contact information is collected. Staff authentication, inventory editing, holds, notifications, verified licensing, reviewed aliases, distance search, and multilingual content are **not implemented yet**. This is a local demo, not a service for real patient use. The green pharmacy fields in the seed are test fixtures, not verified real licences.

@@ -7,11 +7,15 @@ from sqlalchemy.exc import SQLAlchemyError
 from starlette.exceptions import HTTPException
 
 from app.api.routes import router
+from app.config import get_settings
+from app.web import mount_web
 
 app = FastAPI(
     title="MedFind API", version="0.1.0", description="Synthetic prototype. No dispensing or holds."
 )
 app.include_router(router)
+if get_settings().web_dist:
+    mount_web(app, get_settings().web_dist)
 
 
 @app.middleware("http")
