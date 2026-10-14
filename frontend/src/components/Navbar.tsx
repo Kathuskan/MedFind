@@ -252,22 +252,6 @@ export const Navbar: React.FC = () => {
 
                 <button
                   type="button"
-                  onClick={handleGoToUser}
-                  className="btn-primary"
-                  style={{
-                    fontSize: '0.82rem',
-                    padding: '0.4rem 0.85rem',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.35rem',
-                  }}
-                  title="Return to Medicine Seeker / Public Website"
-                >
-                  <User size={14} /> Seeker View
-                </button>
-
-                <button
-                  type="button"
                   onClick={handleGoToAdmin}
                   className="btn-secondary"
                   style={{
@@ -502,79 +486,94 @@ export const Navbar: React.FC = () => {
                 <HelpCircle size={15} /> Help & 24h Rules
               </Link>
 
-              {/* TWO TOP RIGHT CORNER BUTTONS: PHARMACIES & ADMIN (DIRECT PREVIEW) */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: '0.5rem', flexWrap: 'wrap' }}>
-                {/* 1st Button: For Pharmacies */}
-                <button
-                  type="button"
-                  onClick={handleGoToPharmacy}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.35rem',
-                    fontSize: '0.78rem',
-                    fontWeight: 700,
-                    padding: '0.35rem 0.75rem',
-                    borderRadius: '8px',
-                    background: '#fef2f2',
-                    border: '1.5px solid #fecaca',
-                    color: '#dc2626',
-                    cursor: 'pointer',
-                    transition: 'all 0.15s ease',
-                    boxShadow: '0 1px 2px rgba(220, 38, 38, 0.08)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#fee2e2';
-                    e.currentTarget.style.transform = 'translateY(-1px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = '#fef2f2';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                  title="Direct preview access (it will be updated and verified before access in future development)"
-                >
-                  <Building2 size={13} strokeWidth={2.5} style={{ color: '#dc2626' }} />
-                  <span>For Pharmacies</span>
-                  <span style={{ fontSize: '0.68rem', fontWeight: 500, color: '#991b1b', opacity: 0.9 }}>
-                    (it will be updated and verified before access in future development)
-                  </span>
-                </button>
+              {/* TWO SMALL TOP RIGHT CORNER BUTTONS: PHARMACIES & ADMIN */}
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-end',
+                  gap: '0.2rem',
+                  marginLeft: 'auto',
+                  flexShrink: 0,
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  {/* 1st Small Button: Pharmacies */}
+                  <button
+                    type="button"
+                    onClick={handleGoToPharmacy}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.3rem',
+                      fontSize: '0.74rem',
+                      fontWeight: 700,
+                      padding: '0.26rem 0.6rem',
+                      borderRadius: '6px',
+                      background: '#fef2f2',
+                      border: '1.5px solid #fecaca',
+                      color: '#dc2626',
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap',
+                      transition: 'all 0.15s ease',
+                      boxShadow: '0 1px 2px rgba(220, 38, 38, 0.08)',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = '#fee2e2';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = '#fef2f2';
+                    }}
+                    title="Direct preview access to Pharmacy Portal (it will be updated and verified before access in future development)"
+                  >
+                    <Building2 size={12} strokeWidth={2.5} style={{ color: '#dc2626' }} />
+                    Pharmacies
+                  </button>
 
-                {/* 2nd Button: For Admin */}
-                <button
-                  type="button"
-                  onClick={handleGoToAdmin}
+                  {/* 2nd Small Button: Admin */}
+                  <button
+                    type="button"
+                    onClick={handleGoToAdmin}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.3rem',
+                      fontSize: '0.74rem',
+                      fontWeight: 700,
+                      padding: '0.26rem 0.6rem',
+                      borderRadius: '6px',
+                      background: '#ecfdf5',
+                      border: '1.5px solid #a7f3d0',
+                      color: '#059669',
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap',
+                      transition: 'all 0.15s ease',
+                      boxShadow: '0 1px 2px rgba(5, 150, 105, 0.08)',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = '#d1fae5';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = '#ecfdf5';
+                    }}
+                    title="Direct preview access to Administrator Portal (it will be updated and verified before access in future development)"
+                  >
+                    <Shield size={12} strokeWidth={2.5} style={{ color: '#059669' }} />
+                    Admin
+                  </button>
+                </div>
+
+                <span
                   style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.35rem',
-                    fontSize: '0.78rem',
-                    fontWeight: 700,
-                    padding: '0.35rem 0.75rem',
-                    borderRadius: '8px',
-                    background: '#ecfdf5',
-                    border: '1.5px solid #a7f3d0',
-                    color: '#059669',
-                    cursor: 'pointer',
-                    transition: 'all 0.15s ease',
-                    boxShadow: '0 1px 2px rgba(5, 150, 105, 0.08)',
+                    fontSize: '0.62rem',
+                    color: '#64748b',
+                    fontStyle: 'italic',
+                    whiteSpace: 'nowrap',
+                    lineHeight: 1,
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#d1fae5';
-                    e.currentTarget.style.transform = 'translateY(-1px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = '#ecfdf5';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                  title="Direct preview access (it will be updated and verified before access in future development)"
                 >
-                  <Shield size={13} strokeWidth={2.5} style={{ color: '#059669' }} />
-                  <span>For Admin</span>
-                  <span style={{ fontSize: '0.68rem', fontWeight: 500, color: '#065f46', opacity: 0.9 }}>
-                    (it will be updated and verified before access in future development)
-                  </span>
-                </button>
+                  (it will be updated and verified before access in future development)
+                </span>
               </div>
             </>
           )}
